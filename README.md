@@ -348,5 +348,7 @@ experiments:
 ###Отчёт:
 ####direct
 ![Cache](./images/direct.jpg)
-
-
+####reverse
+![Cache](./images/reverse.jpg)
+####random
+![Cache](./images/random.jpg)
