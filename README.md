@@ -132,29 +132,221 @@ cache_size['3'] = 8 mb;
 
 ### Результаты
 
-Ниже представлен формат и пример отчета:
+Ниже представлены результаты программы:
 
 ```yaml
-investigation:                                       |  investigaion:
-  travel_variant: <вариант_прохода>                  |    travel_order: "direction"
-  experiments:                                       |    experiments:
-  - experiment:                                      |    - experiment:
-      number:                                        |        number: 1
-      input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "1mb"
-      results:                                       |        results:
-        duration: <продолжительность>                |          duration: "1ns"
-  - experiment:                                      |    - experiment:
-      number: <номер_эксперимента>                   |        number: 2
-      input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "2mb"
-      results:                                       |        results:
-        duration: <продолжительность>                |          duration: "2ns"
-                                                     |
-investigation:                                       |  investigation:
-...                                                  |  ...
+investigation:
+travel variant: direct
+experiments:
+  - experiment:
+      number: 1
+      input data:
+        buffer size: 16KiB
+      results:
+        duration: 0.316 mcs
+  - experiment:
+      number: 2
+      input data:
+        buffer size: 32KiB
+      results:
+        duration: 1.108 mcs
+  - experiment:
+      number: 3
+      input data:
+        buffer size: 64KiB
+      results:
+        duration: 2.934 mcs
+  - experiment:
+      number: 4
+      input data:
+        buffer size: 128KiB
+      results:
+        duration: 7.387 mcs
+  - experiment:
+      number: 5
+      input data:
+        buffer size: 256KiB
+      results:
+        duration: 13.634 mcs
+  - experiment:
+      number: 6
+      input data:
+        buffer size: 512KiB
+      results:
+        duration: 24.317 mcs
+  - experiment:
+      number: 7
+      input data:
+        buffer size: 1024KiB
+      results:
+        duration: 48.488 mcs
+  - experiment:
+      number: 8
+      input data:
+        buffer size: 2048KiB
+      results:
+        duration: 112.322 mcs
+  - experiment:
+      number: 9
+      input data:
+        buffer size: 4096KiB
+      results:
+        duration: 435.324 mcs
+  - experiment:
+      number: 10
+      input data:
+        buffer size: 8192KiB
+      results:
+        duration: 952.557 mcs
+  - experiment:
+      number: 11
+      input data:
+        buffer size: 12288KiB
+      results:
+        duration: 985.387 mcs
+investigation:
+travel variant: reverse
+experiments:
+  - experiment:
+      number: 1
+      input data:
+        buffer size: 16KiB
+      results:
+        duration: 0.01 mcs
+  - experiment:
+      number: 2
+      input data:
+        buffer size: 32KiB
+      results:
+        duration: 1.007 mcs
+  - experiment:
+      number: 3
+      input data:
+        buffer size: 64KiB
+      results:
+        duration: 2.794 mcs
+  - experiment:
+      number: 4
+      input data:
+        buffer size: 128KiB
+      results:
+        duration: 5.301 mcs
+  - experiment:
+      number: 5
+      input data:
+        buffer size: 256KiB
+      results:
+        duration: 10.743 mcs
+  - experiment:
+      number: 6
+      input data:
+        buffer size: 512KiB
+      results:
+        duration: 17.97 mcs
+  - experiment:
+      number: 7
+      input data:
+        buffer size: 1024KiB
+      results:
+        duration: 38.83 mcs
+  - experiment:
+      number: 8
+      input data:
+        buffer size: 2048KiB
+      results:
+        duration: 79.765 mcs
+  - experiment:
+      number: 9
+      input data:
+        buffer size: 4096KiB
+      results:
+        duration: 323.569 mcs
+  - experiment:
+      number: 10
+      input data:
+        buffer size: 8192KiB
+      results:
+        duration: 1008.7 mcs
+  - experiment:
+      number: 11
+      input data:
+        buffer size: 12288KiB
+      results:
+        duration: 1570.47 mcs
+investigation:
+travel variant: random
+experiments:
+  - experiment:
+      number: 1
+      input data:
+        buffer size: 16KiB
+      results:
+        duration: 7.169 mcs
+  - experiment:
+      number: 2
+      input data:
+        buffer size: 32KiB
+      results:
+        duration: 15.691 mcs
+  - experiment:
+      number: 3
+      input data:
+        buffer size: 64KiB
+      results:
+        duration: 26.212 mcs
+  - experiment:
+      number: 4
+      input data:
+        buffer size: 128KiB
+      results:
+        duration: 48.458 mcs
+  - experiment:
+      number: 5
+      input data:
+        buffer size: 256KiB
+      results:
+        duration: 107.933 mcs
+  - experiment:
+      number: 6
+      input data:
+        buffer size: 512KiB
+      results:
+        duration: 230.673 mcs
+  - experiment:
+      number: 7
+      input data:
+        buffer size: 1024KiB
+      results:
+        duration: 605.832 mcs
+  - experiment:
+      number: 8
+      input data:
+        buffer size: 2048KiB
+      results:
+        duration: 1039.88 mcs
+  - experiment:
+      number: 9
+      input data:
+        buffer size: 4096KiB
+      results:
+        duration: 3359.72 mcs
+  - experiment:
+      number: 10
+      input data:
+        buffer size: 8192KiB
+      results:
+        duration: 9055.45 mcs
+  - experiment:
+      number: 11
+      input data:
+        buffer size: 12288KiB
+      results:
+        duration: 14839.1 mcs
 ```
 
-### Рекомендации
 
-При создание неиспользуемых переменных для считывание данных из буфера можно использовать аттрибут `[[maybe_unused]]`
+###Отчёт:
+####direct
+![Cache](./images/direct.jpg)
+
+

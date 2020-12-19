@@ -1,4 +1,4 @@
-#include <header.hpp>
+#include <cpu_tester.hpp>
 
 int main() {
 

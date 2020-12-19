@@ -1,7 +1,11 @@
 // Copyright 2020 Your Name <your_email>
 
 #include <gtest/gtest.h>
+#include "cpu_tester.hpp"
 
 TEST(Example, EmptyTest) {
-    EXPECT_TRUE(true);
+  std::vector<int> e_vec;
+  CPU_tester example(e_vec, 32, 8192);
+  example.completeAllTests();
+  EXPECT_TRUE(true);
 }
