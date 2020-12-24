@@ -7,6 +7,7 @@
 
 const int TESTCOUNT = 1000;
 const int TRANSFORM = 256;
+const int STEP = 16;
 
 class CPU_tester{
  public:
